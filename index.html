@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Para mi amor</title>
+    <title>Carta</title>
     <style>
         @keyframes fadeInOut {
             0% { opacity: 0; transform: scale(0.8); }
@@ -58,7 +58,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: brown;
+            background-color: rgb(146, 37, 37);
             transform: translateZ(-1px);
         }
 
@@ -74,8 +74,8 @@
         .scroll-text {
             text-align: center;
             font-size: 24px;
-            color: #e74c3c;
-            margin-top: 20px;
+            color: #413be2;
+            margin-top: 150px;
             opacity: 0; /* Inicialmente oculto */
             animation: fadeIn 2s 4s forwards; /* Aparece después del sobre */
         }
@@ -99,36 +99,81 @@
             width: 100%;
         }
 
-        .image {
-            max-width: 100%;
-            border-radius: 10px;
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
+        .image-container img {
+            width: 48%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .gift-button {
+            background-color: #413be2; /* Color de fondo */
+            border: none; /* Sin borde */
+            color: white; /* Color del texto */
+            padding: 15px 32px; /* Espaciado interno */
+            text-align: center; /* Centrar texto */
+            text-decoration: none; /* Sin subrayado */
+            display: inline-block; /* Mostrar como un bloque en línea */
+            font-size: 16px; /* Tamaño de fuente */
+            margin: 4px 2px; /* Margen alrededor del botón */
+            cursor: pointer; /* Cambiar cursor al pasar el mouse */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s; /* Efecto de transición */
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="envelope" onclick="openEnvelope()"> 
+        <div class="envelope"> 
             <div class="envelope-back"></div>
             <div class="envelope-front"></div>
-            <div class="heart" aria-label="Corazón, haz clic para abrir la carta">🤎</div>
+            <div class="heart" aria-label="">🤎</div>
         </div>
-        <div class="scroll-text">Desliza hacia abajo</div>
+        <div class="scroll-text">⬇️ Desliza para abajo ⬇️</div>
         <div class="content">
             <div class="text-block">
-                <h2>Mi amor,</h2>
-                <p>Aquí puedes escribir el primer párrafo de tu carta...</p>
+                <h2>Sí, así de molón soy. 😎</h2>
+                <p>No te voy a mentir, llevo tiempo viendo a la gente hacer cosas como esta, y siempre me ha parecido bastante original, así que he querido hacerlo yo también. <br><br>
+                
+                ¿A qué me refiero? A hacerte una página web. La lié cuando te la mandé sin querer mientras la hacía, pero bueno, somos humanos jijiji. Si estás viendo esto es que he conseguido poner todo en marcha, que no ha sido nada fácil, pero weno. </p>
             </div>
-            <img src="https://aguacatec.es/wp-content/uploads/2023/10/e5a978b8-6772-4c85-a50e-15581af7d483.png" alt="Imagen 1" class="image">
+            <div class="image-container">
+                <img src="img/1..JPG" alt="Imagen 1">
+                <img src="img/2.JPG" alt="Imagen 2">
+            </div>
             <div class="text-block">
-                <p>Segundo párrafo de tu carta...</p>
+                <h2>¿Esto no era una carta? 💌</h2>
+                <p>Lo es, lo es, no te desesperes mujer (con rima y todo). 
+                <br><br>
+                Voy a intentar expresarme lo mejor posible, pero aun así me voy a dejar muchísimas cosas por el camino, así que ahí voy... <br><br>
+                Creo que lo mejor que puedo hacer es empezar dándote las gracias por todo lo que has hecho y haces por mí. Antes de ti nadie había venido a verme a un torneo, o se había preocupado de venir a mi casa los días que estaba mal. Si alguna vez me has oído decir que me hacía falta "x" a los pocos días lo tenías preparado para dármelo, como cuando dije que tenía pensado comprarme unas rodilleras y llegaste con unas para mí <i>(las uso un montón desde entonces, ya me he acostumbrado :P)</i>, o cuando te dije que necesitaba algo para echarme en las lentillas cuando estuvieran secas y viniste al campo donde entrenamos de sorpresa para darme suero fisiológico.
+                <br><br>
+                Todas esas cosas las puedes considerar básicas, pero a mí me hacen sentirme muy querido, y me hacen ver lo mucho que llegas a pensar en mí y lo atenta que eres. Cuando murió mi abuelo estuviste ahí para todo lo que necesitara, y con lo Thor hiciste lo mismo, hasta te ofreciste a acompañarme en algo tan desagradable y doloroso como eso.
+                <br><br>
+                También te podría agradecer la paciencia que tienes conmigo para muchas cosas. Los dos sabemos que yo no soy la persona más normal del mundo y que tengo cosas que a veces no tienen sentido alguno. Muchas veces no actuo como te gustaría, y eso a otra persona podría sacarle de quicio a niveles estratosféricos, y sin embargo tú sigues aquí después de que no coja el móvil a menudo, de qué no necesite tanto contacto como tú necesitas a veces, después de las cantidades absurdas de espacio que necesito a veces, y después de todo. Esa paciencia es admirable, y demuestra que quieres que esto salga adelante.                    
+                </p>
             </div>
-            <img src="/placeholder.svg?height=300&width=400" alt="Imagen 2" class="image">
+            <div class="image-container">
+                <img src="img/3.JPG" alt="Imagen 3">
+                <img src="img/4.JPG" alt="Imagen 4">
+            </div>
             <div class="text-block">
-                <p>Tercer párrafo de tu carta...</p>
+                <p>Voy a usar esta carta también para <b>recordarte</b> el tipo de persona que eres, ya que a veces pasan cosas por tu cabeza que no son, y quiero dejártelas claras desde ya. 
+                <br><br>
+                He llegado a escuchar salir de tu boca tonterías gigantescas como <b>"No te merezco"</b>, o <b>"Tengo miedo de perderte"</b>, cuando el único que hace cosas por que eso sea así soy yo siempre. Así que no me gustaría volver a escuchar eso, y quiero que empieces a valorar el tipo de persona que eres. Gente como tú queda muy poca y tenerte a mi lado es mi mayor suerte. He pasado por gente verdaderamente mala o egoísta que me hacía estar incómodo o presionado en una relación, y contigo nunca ha sido así. Siempre hemos podido exponer nuestros puntos de vista para llegar a acuerdos en los que ambos estuviéramos cómodos. Contigo se puede hablar sin pensar que es el fin del mundo.
+                <br><br>
+                Por último quiero aprovechar para decirte que vas a poder con todo lo que te propongas ya que eres una persona con una gran iniciativa y siempre estás lista para dar tu 100%. Estoy seguro de te vas a desarrollar bien como persona y de que vas a llegar a un punto de tu vida en el que estés muy agusto con lo que hayas logrado para ese entonces.
+                </p>
             </div>
-            <img src="/placeholder.svg?height=300&width=400" alt="Imagen 3" class="image">
-        </div>
+            <h1>Aún queda algo...</h1>
+            <a href="regalo.html" class="gift-button">Púlsame</a>
     </div>
 
     <script>
