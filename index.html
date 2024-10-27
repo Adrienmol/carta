@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para mi amor</title>
+    <style>
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: scale(0.8); }
+            20% { opacity: 1; transform: scale(1); }
+            80% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.8); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffebee;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .envelope {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+            animation: fadeInOut 4s forwards;
+            margin-top: 300px;
+        }
+
+        .envelope-front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .envelope-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: brown;
+            transform: translateZ(-1px);
+        }
+
+        .heart {
+            font-size: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Asegurarse de que el corazón esté encima del sobre */
+        }
+
+        .scroll-text {
+            text-align: center;
+            font-size: 24px;
+            color: #e74c3c;
+            margin-top: 20px;
+            opacity: 0; /* Inicialmente oculto */
+            animation: fadeIn 2s 4s forwards; /* Aparece después del sobre */
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 2s 6s forwards;
+            opacity: 0;
+        }
+
+        .text-block {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .image {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope" onclick="openEnvelope()"> 
+            <div class="envelope-back"></div>
+            <div class="envelope-front"></div>
+            <div class="heart" aria-label="Corazón, haz clic para abrir la carta">🤎</div>
+        </div>
+        <div class="scroll-text">Desliza hacia abajo</div>
+        <div class="content">
+            <div class="text-block">
+                <h2>Mi amor,</h2>
+                <p>Aquí puedes escribir el primer párrafo de tu carta...</p>
+            </div>
+            <img src="https://aguacatec.es/wp-content/uploads/2023/10/e5a978b8-6772-4c85-a50e-15581af7d483.png" alt="Imagen 1" class="image">
+            <div class="text-block">
+                <p>Segundo párrafo de tu carta...</p>
+            </div>
+            <img src="/placeholder.svg?height=300&width=400" alt="Imagen 2" class="image">
+            <div class="text-block">
+                <p>Tercer párrafo de tu carta...</p>
+            </div>
+            <img src="/placeholder.svg?height=300&width=400" alt="Imagen 3" class="image">
+        </div>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            const envelope = document.querySelector('.envelope');
+            envelope.style.transform = 'rotateY(180deg)'; // Girar el sobre
+            document.querySelector('.scroll-text').style.opacity = 1; // Hacer visible el texto de deslizar
+            setTimeout(() => {
+                document.querySelector('.content').style.opacity = 1; // Hacer visible el contenido
+            }, 600); // Esperar a que termine la animación del giro
+        }
+    </script>
+</body>
+</html>
